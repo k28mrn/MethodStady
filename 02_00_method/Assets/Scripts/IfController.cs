@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScriptController : MonoBehaviour
+public class IfController : MonoBehaviour
 {
     // Inputフィールドを制御するための変数を準備
     public InputField inputA;
