@@ -10,11 +10,22 @@ public class MethodController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetupItem();
+        // SetupItem();
 
-        for (int i = 0; i < cubeList.Count; i++) {
-            XAlignment(i, cubeList[i]);
-        }
+        // for (int i = 0; i < cubeList.Count; i++) {
+        //     XAlignment(i, cubeList[i]);
+        // }
+
+        GameObject g1 =  CreateObject(PrimitiveType.Cube);
+        g1.transform.position = new Vector3(1, 1, 1);
+
+        GameObject g2 =  CreateObject(PrimitiveType.Sphere);
+        g2.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
+        GameObject g3 =  CreateObject(PrimitiveType.Sphere);
+        g3.transform.position = new Vector3(-1, -1, -1);
+        g3.GetComponent<Renderer>().material.color = Color.blue;
+
     }
 
     /// <summary>
@@ -38,6 +49,11 @@ public class MethodController : MonoBehaviour
         cube.transform.position = pos;
     }
 
+
+    GameObject CreateObject(PrimitiveType type) {
+        return GameObject.CreatePrimitive(type);
+    }
+    
     // Update is called once per frame
     void Update()
     {
