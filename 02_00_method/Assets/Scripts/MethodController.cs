@@ -49,7 +49,12 @@ public class MethodController : MonoBehaviour
         cube.transform.position = pos;
     }
 
-
+    /// <summary>
+    /// 引数として渡されたprimitiveTypeをもとに
+    /// gameobjectを生成して返す
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
     GameObject CreateObject(PrimitiveType type) {
         return GameObject.CreatePrimitive(type);
     }
